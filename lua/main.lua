@@ -1,4 +1,4 @@
-require('keymapping');
+require('keymap')
 
 vim.cmd [[packadd packer.nvim]]
 
@@ -173,3 +173,13 @@ require('catppuccin').setup({
 })
 
 vim.cmd[[colorscheme catppuccin]]
+
+local M = {}
+
+function M.setup(config)
+  config = config or {}
+
+  require('editor').setup(config.editor)
+end
+
+return M

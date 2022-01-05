@@ -1,10 +1,3 @@
-    
-set relativenumber
-
-set expandtab
-set tabstop=4
-set shiftwidth=4
-
 let mapleader = ';'
 
 
@@ -82,10 +75,19 @@ let g:nvim_tree_icons = {
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=bluef
 
+" lua require('main')
 
-lua require('main')
+" let &relativenumber=2
 
+" set relativenumber
 
+lua << EOF
+require'main'.setup {
+    editor = {
+        number = false,
+        relativenumber = false
+    }
+}
+EOF
 
-
-
+set expandtab

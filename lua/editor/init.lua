@@ -14,8 +14,6 @@ function M.setup(user_config)
 
     local config = merge(default_config, adaptor.v2t(user_config))
 
-    print(vim.inspect(adaptor.v2t(user_config)))
-    print(vim.inspect(config))
     for k, v in pairs(config) do vim[v[2]][k] = v[1] end
 end
 

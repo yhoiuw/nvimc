@@ -1,6 +1,3 @@
-let mapleader = ';'
-
-
 let g:nvim_tree_quit_on_open = 1 "0 by default, closes the tree when you open a file
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
 let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
@@ -75,19 +72,12 @@ let g:nvim_tree_icons = {
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=bluef
 
-" lua require('main')
-
-" let &relativenumber=2
-
-" set relativenumber
-
 lua << EOF
 require'main'.setup {
     editor = {
-        number = false,
-        relativenumber = false
     }
 }
 EOF
 
-set expandtab
+setlocal list
+set listchars=tab:>~,trail:.

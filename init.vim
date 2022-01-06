@@ -79,5 +79,10 @@ require'main'.setup {
 }
 EOF
 
+lua << EOF
+require'lspconfig'.vuels.setup {}
+require'lspconfig'.pyright.setup {}
+EOF
+
 setlocal list
 set listchars=tab:>~,trail:.

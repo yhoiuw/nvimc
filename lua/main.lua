@@ -33,6 +33,9 @@ require('packer').startup(function()
 	    "catppuccin/nvim",
 	    as = "catppuccin"
     })
+
+    use {'neovim/nvim-lspconfig'}
+
 end)
 
 -- file explorer
